@@ -29,13 +29,12 @@ class MainTest {
     }
 
     // Teste ob PW Zahlen enthält
-
     @Test
     void pwContainsDigit_Return_true_When_Password_contains_Digit() {
         //GIVEN
         boolean expected = true;
         //WHEN
-        boolean actual = Main.pwContainsDigit("hallo");
+        boolean actual = Main.pwContainsDigit("hallo1");
         //THEN
         assertEquals(expected, actual);
     }
@@ -52,7 +51,6 @@ class MainTest {
     }
 
     // Teste ob PW Groß und Kleinbuchstaben enthält
-
     @Test
     void pwContainsUpperCaseAndLowerCase_Return_true_When_Password_contains_Upper_Lower_Case() {
         // Given
@@ -77,9 +75,56 @@ class MainTest {
     void pwContainsUpperCaseAndLowerCase_Return_false_When_Password_contains_Upper_Case() {
         // Given
         boolean expected = false;
-        // When
+        // WHEN
         boolean actual = Main.pwContainsUpperCaseAndLowerCase("HALLO");
-        // Then
+        // THEN
         assertEquals(expected,actual);
     }
+
+    // Teste ob PW ein "einfaches" passwort ist
+    @Test
+    void isCommonPW_Return_true_When_Password_in_PWList() {
+        // GIVEN
+        boolean expected = true;
+        // WHEN
+        boolean actual = Main.isCommonPW("hallo");
+        //THEN
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void isCommonPW_Return_false_When_Password_not_in_PWList() {
+        // GIVEN
+        boolean expected = false;
+        // WHEN
+        boolean actual = Main.isCommonPW("Nicht in List");
+        //THEN
+        assertEquals(expected,actual);
+    }
+
+
+    // Teste ob PW Sonderzeichen enthält
+    @Test
+    void isSpecialCharacterPW_Return_true_When_Password_contains_special_Character() {
+        //GIVEN
+        boolean expected = true;
+        // WHEN
+        boolean actual = Main.isSpecialCharacterPW("hallo%");
+        //THEN
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void isSpecialCharacterPW_Return_false_When_Password_didnt_contains_special_Character() {
+        //GIVEN
+        boolean expected = false;
+        // WHEN
+        boolean actual = Main.isSpecialCharacterPW("hallo");
+        //THEN
+        assertEquals(expected, actual);
+    }
+
+
+
+
 }

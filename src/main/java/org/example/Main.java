@@ -1,6 +1,8 @@
 package org.example;
 
-import javax.xml.stream.events.Characters;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,7 +11,6 @@ public class Main {
     }
 
     /**
-     *
      * @param password  --> prüft ob das PW mindesten 8 Stellen hat.
      * @return          --> gibt bei mindestens 8 Stellen true zurück- bei <8 Stellen false.
      */
@@ -23,7 +24,6 @@ public class Main {
 
 
     /**
-     *
      * @param password   --> prüft ob das PW Zahlen enthält.
      * @return          --> gibt bei enthaltenen Zahlen true zurück- andernfalls false.
      */
@@ -38,9 +38,8 @@ public class Main {
     }
 
     /**
-     *
      * @param password      --> prüft on PW Groß/ Kleinbuchstaben enthält
-     * @return              --> gibt true bzw false aus
+     * @return              --> gibt true bzw false zurück
      */
 
     public static boolean pwContainsUpperCaseAndLowerCase(String password) {
@@ -57,13 +56,33 @@ public class Main {
         return containsUpperCase && containsLowerCase;
     }
 
+    /**
+     * @param password      --> prüft eine Liste von häufigen Passwörtern
+     * @return              --> gibt true bzw false zurück
+     */
 
+    public static boolean isCommonPW(String password) {
+        List<String> commonPasswords = Arrays.asList(
+                "123456", "password123", "GOD", "hallo"
+        );
+        return commonPasswords.contains(password);
+    }
 
+    /**
+     * @param password      --> prüft Passwort auf Sonderzeichen
+     * @return              --> gibt true bzw false zurück
+     */
 
-
-
-
-
+    public static boolean isSpecialCharacterPW(String password) {
+        String specialCharacter = "!§$%&/()=?_-:.;,¡“¶¢[]<>*+";
+        for (char c : password.toCharArray()) {
+            if (specialCharacter.contains(String.valueOf(c))) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
+
 
 
