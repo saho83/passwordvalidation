@@ -114,6 +114,7 @@ class MainTest {
         assertEquals(expected, actual);
     }
 
+
     @Test
     void isSpecialCharacterPW_Return_false_When_Password_didnt_contains_special_Character() {
         //GIVEN
@@ -123,6 +124,22 @@ class MainTest {
         //THEN
         assertEquals(expected, actual);
     }
+
+
+    // Testet generierten String
+//    @Test
+//    void generateRandomString_Return_true() {
+//        // GIVEN
+//        int passwordLength = 12;
+//        String charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;':,.<>?";
+//        boolean expected = true;
+//        // WHEN
+//        boolean actual = Main.generateRandomString(12, charset);
+//        //THEN
+//    }
+
+
+
 
 
 
