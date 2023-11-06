@@ -46,5 +46,6 @@ class MainTest {
         boolean actual = Main.pwContainsDigit("hallo1");
         //THEN
         assertEquals(expected, actual);
+
     }
 }
