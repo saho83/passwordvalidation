@@ -43,11 +43,7 @@ public class Main {
          * @return --> gibt bei mindestens 8 Stellen true zurück- bei <8 Stellen false.
          */
         public static boolean isPasswordValidLength(String password) {
-            if (password.length() >= 8) {
-                return true;
-            } else {
-                return false;
-            }
+            return password.length() >= 8;
         }
 
 
@@ -127,6 +123,9 @@ public class Main {
             }
             return randomString.toString();
         }
+
+
+
 
 
 }
