@@ -126,15 +126,15 @@ class MainTest {
     }
 
 
-    // Testet generierten String
+//     //Testet generierten String
 //    @Test
 //    void generateRandomString_Return_true() {
 //        // GIVEN
-//        int passwordLength = 12;
+////        int passwordLength = 12;
 //        String charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;':,.<>?";
-//        boolean expected = true;
+//        String expected = generatedPassword;
 //        // WHEN
-//        boolean actual = Main.generateRandomString(12, charset);
+//        boolean actual = Main.generateRandomString(12, "dldsdlsldlsdlsdls");
 //        //THEN
 //    }
 

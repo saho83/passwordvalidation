@@ -20,6 +20,7 @@ public class Main {
 
 
         String charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;':,.<>?";
+
         // Speichert das generierte PW in einen String
         String generatedPassword = generateRandomString(passwordLength, charset);
         System.out.println("Zufällig generierter String: " + generatedPassword);
@@ -32,7 +33,6 @@ public class Main {
         } else {
             System.out.println("Das generierte Passwort erfüllt nicht alle Anforderungen.");
         }
-
 
     }
 
@@ -55,7 +55,6 @@ public class Main {
          * @param password --> prüft ob das PW Zahlen enthält.
          * @return --> gibt bei enthaltenen Zahlen true zurück- andernfalls false.
          */
-
         public static boolean pwContainsDigit(String password) {
             for (char c : password.toCharArray()) {
                 if (Character.isDigit(c)) {
@@ -65,11 +64,11 @@ public class Main {
             return false;
         }
 
+
         /**
          * @param password --> prüft on PW Groß/ Kleinbuchstaben enthält
          * @return --> gibt true bzw false zurück
          */
-
         public static boolean pwContainsUpperCaseAndLowerCase(String password) {
             boolean containsUpperCase = false;
             boolean containsLowerCase = false;
@@ -84,11 +83,11 @@ public class Main {
             return containsUpperCase && containsLowerCase;
         }
 
+
         /**
          * @param password --> prüft eine Liste von häufigen Passwörtern
          * @return --> gibt true bzw false zurück
          */
-
         public static boolean isCommonPW(String password) {
             List<String> commonPasswords = Arrays.asList(
                     "123456", "password123", "GOD", "hallo"
@@ -96,11 +95,11 @@ public class Main {
             return commonPasswords.contains(password);
         }
 
+
         /**
          * @param password --> prüft Passwort auf Sonderzeichen
          * @return --> gibt true bzw false zurück
          */
-
         public static boolean isSpecialCharacterPW(String password) {
             String specialCharacter = "!§$%&/()=?_-:.;,¡“¶¢[]<>*+";
             for (char c : password.toCharArray()) {
@@ -111,14 +110,13 @@ public class Main {
             return false;
         }
 
-    /**
-     *
-     * @param length        --> nimmt die eingegeben Länge des passworts entgegen
-     * @param charset       --> nimt die Zeichenfolge entgegen
-     * @return              --> gibt den zufällig generierten String aus
-     */
-
-        public static String generateRandomString(int length, String charset) {
+         /**
+         *
+         * @param length        --> nimmt die eingegeben Länge des passworts entgegen
+         * @param charset       --> nimt die Zeichenfolge entgegen
+         * @return              --> gibt den zufällig generierten String aus
+         */
+         public static String generateRandomString(int length, String charset) {
             Random random = new Random();
             StringBuilder randomString = new StringBuilder();
 
